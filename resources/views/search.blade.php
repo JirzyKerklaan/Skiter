@@ -3,7 +3,7 @@
 
     <div class="bg-gradient-to-b from-[#111827] to-[#0C1424] min-h-screen w-screen">
         @auth
-            <div class="navbar bg-gray-900 border-b border-[#393F4A] mb-4 sticky top-0 z-30">
+            <div class="navbar bg-gray-900 border-b border-[#393F4A] mb-4 sticky top-0 z-30 text-[#C5C5C5]">
                 <div class="navbar-start lg:hidden">
                     <div class="dropdown">
                         <label tabindex="0" class="btn btn-ghost lg:hidden">

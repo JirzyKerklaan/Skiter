@@ -55,22 +55,37 @@
                 </div>
             </div>
         @else
-            <div class="navbar bg-gray-900 border-b border-[#393F4A] mb-4 sticky top-0">
-                <div class="navbar-start">
+            <div class="navbar bg-gray-900 border-b border-[#393F4A] mb-4 sticky top-0 z-30">
+                <div class="navbar-start lg:hidden">
                     <div class="dropdown">
                         <label tabindex="0" class="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             <li><a href="/">Home</a></li>
+                            <li><a href="/search">search</a></li>
+                            <li><a href="/crud">Add post</a></li>
                         </ul>
                     </div>
-                    <a class="btn btn-ghost normal-case text-xl">skiter</a>
                 </div>
-                <div class="navbar-center hidden lg:flex">
+                <div class="navbar-start hidden lg:flex">
                     <ul class="menu menu-horizontal px-1">
-                        <li><a href="/">Home</a></li>
+                        <li><a href="/">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                </svg>
+
+                            </a></li>
+                        <li><a href="/search">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                                </svg>
+                            </a></li>
                     </ul>
+
+                </div>
+                <div class="navbar-center">
+                    <a class="normal-case text-xl">skiter</a>
                 </div>
                 <div class="navbar-end">
                     <a href="/login" class="btn">login/register</a>

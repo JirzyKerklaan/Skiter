@@ -10,14 +10,14 @@
                 <!-- Email Address -->
                 <div>
                     <x-input-label class="text-[#C5C5C5] m-1" for="email" :value="__('Email')" />
-                    <x-text-input id="email" class="m-1 bg-[#00000020] w-full p-2" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-                    <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                    <x-text-input id="email" class="m-1 bg-[#00000020] w-full p-2 text-[#C5C5C5]" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+                    <x-input-error :messages="$errors->get('email')" class="mt-2 text-red-500" />
                 </div>
 
                 <!-- Password -->
                 <div>
                     <x-input-label class="text-[#C5C5C5] m-1" for="password" :value="__('Password')" />
-                    <x-text-input id="password" class="m-1 bg-[#00000020] w-full p-2"
+                    <x-text-input id="password" class="m-1 bg-[#00000020] text-[#C5C5C5] w-full p-2"
                                   type="password"
                                   name="password"
                                   required autocomplete="current-password" />

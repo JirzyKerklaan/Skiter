@@ -1,10 +1,9 @@
 <x-app-layout>
-
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <div class="bg-gradient-to-b from-[#111827] to-[#0C1424] min-h-screen">
+    <div class="bg-gradient-to-b from-[#111827] to-[#0C1424] min-h-screen w-screen">
         @auth
-            <div class="navbar bg-gray-900 border-b border-[#393F4A] mb-4 sticky top-0 z-30">
+            <div class="navbar bg-transparent border-b border-[#393F4A] mb-4">
                 <div class="navbar-start lg:hidden">
                     <div class="dropdown">
                         <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -42,21 +41,15 @@
                 <div class="navbar-center">
                     <a class="normal-case text-xl">skiter</a>
                 </div>
-
-                <div class="navbar-end">
-                    <div class="menu menu-horizontal px-1">
-                        <ul>
-                            <li class="group"><a href="/account">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                                    </svg>
-                                </a></li>
-                        </ul>
-                    </div>
-                </div>
+                <form class="navbar-end" method="post" action="{{route('logout')}}">
+                    @csrf
+                    <button class="btn btn-ghost type="submit">
+                    Logout
+                    </button>
+                </form>
             </div>
         @else
-            <div class="navbar bg-gray-900 border-b border-[#393F4A] mb-4 sticky top-0">
+            <div class="navbar bg-transparent">
                 <div class="navbar-start">
                     <div class="dropdown">
                         <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -78,27 +71,6 @@
                 </div>
             </div>
         @endauth
-<div class="">
-    <div class="w-2/5 mx-auto">
-        <form action="{{route('message.store')}}" method="post">
-            <x-validation-errors/>
-            <div class="flex flex-col items-center">
-                <div class="w-full">
-                    <label class="block text-[#c5c5c5] text-md font-bold mb-2" for="name">Title:
-                        <input placeholder="Today i went..." class="shadow rounded-md bg-[#00000020] placeholder:font-normal text-[#c5c5c5] appearance-none w-full focus:outline-[#c5c5c5] rounded py-4 px-3 leading-tight focus:outline-none" type="text" name="titel" id="naam">
-                    </label>
-                </div>
-                <div class="w-full">
-                    <label class="block text-[#c5c5c5] text-md font-bold mb-2" for="name">Caption:
-                        <textarea placeholder="I started with..." class="shadow rounded-md bg-[#00000020] placeholder:font-normal text-[#c5c5c5] min-h-fit h-32 w-full appearance-none focus:outline-[#c5c5c5] rounded py-2 px-3 leading-tight focus:outline-none" name="text" id="text"></textarea>
-                    </label>
-                </div>
-            @csrf
-                <div class="w-full">
-            <button class="bg-transparent hover:bg-[#7B68EE] transition duration-300 ease-in-out text-[#c5c5c5] font-semibold py-2 px-4 w-full rounded-md border border-[#7B68EE] hover:border-transparent" type="submit">Create new post</button>
-                </div>
-            </div></form>
-    </div>
-    </div>
+
     </div>
 </x-app-layout>

@@ -35,6 +35,14 @@ class MessageController extends Controller
         return view("crud");
     }
 
+    public function search(){
+        return view("search");
+    }
+
+    public function account() {
+        return view("account");
+    }
+
     public function edit($id){
         $message = Message::findOrFail($id);
         return view('update', ['message'=>$message]);

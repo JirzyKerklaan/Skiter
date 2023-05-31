@@ -26,5 +26,9 @@ Route::put('/messages/{message}/edit',[MessageController::class,"update"])->name
 
 Route::delete('/messages/{message}/delete',[MessageController::class,"destroy"])->name('messages.delete');
 
+Route::get('/search', [MessageController::class,"search"])->name('message.search');
+
+Route::get('/account', [MessageController::class,"account"])->name('message.account');
+
 
 require __DIR__ . '/auth.php';

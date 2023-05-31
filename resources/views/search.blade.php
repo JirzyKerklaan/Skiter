@@ -1,8 +1,7 @@
 <x-app-layout>
-
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <div class="bg-gradient-to-b from-[#111827] to-[#0C1424] min-h-screen">
+    <div class="bg-gradient-to-b from-[#111827] to-[#0C1424] min-h-screen w-screen">
         @auth
             <div class="navbar bg-gray-900 border-b border-[#393F4A] mb-4 sticky top-0 z-30">
                 <div class="navbar-start lg:hidden">
@@ -78,27 +77,18 @@
                 </div>
             </div>
         @endauth
-<div class="">
-    <div class="w-2/5 mx-auto">
-        <form action="{{route('message.store')}}" method="post">
-            <x-validation-errors/>
-            <div class="flex flex-col items-center">
-                <div class="w-full">
-                    <label class="block text-[#c5c5c5] text-md font-bold mb-2" for="name">Title:
-                        <input placeholder="Today i went..." class="shadow rounded-md bg-[#00000020] placeholder:font-normal text-[#c5c5c5] appearance-none w-full focus:outline-[#c5c5c5] rounded py-4 px-3 leading-tight focus:outline-none" type="text" name="titel" id="naam">
-                    </label>
+        <div class="flex justify-center flex-col items-center">
+            <div class="w-3/5 bg-[#00000020] rounded-full h-14 flex items-center">
+                <input type="text" placeholder="Search..." class="w-[90%] h-[90%] rounded-l-full bg-transparent px-4 border-r border-gray-700">
+                <div class="flex items-center justify-center flex-grow hover:bg-[#7B68EE] transition duration-400 ease-in-out h-full rounded-r-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                    </svg>
                 </div>
-                <div class="w-full">
-                    <label class="block text-[#c5c5c5] text-md font-bold mb-2" for="name">Caption:
-                        <textarea placeholder="I started with..." class="shadow rounded-md bg-[#00000020] placeholder:font-normal text-[#c5c5c5] min-h-fit h-32 w-full appearance-none focus:outline-[#c5c5c5] rounded py-2 px-3 leading-tight focus:outline-none" name="text" id="text"></textarea>
-                    </label>
-                </div>
-            @csrf
-                <div class="w-full">
-            <button class="bg-transparent hover:bg-[#7B68EE] transition duration-300 ease-in-out text-[#c5c5c5] font-semibold py-2 px-4 w-full rounded-md border border-[#7B68EE] hover:border-transparent" type="submit">Create new post</button>
-                </div>
-            </div></form>
-    </div>
-    </div>
+            </div>
+            <a href="/account" class="w-full h-fit flex items-center justify-center flex-col mt-8">
+                <div class="result w-2/4 px-4 py-4 rounded-full bg-[#00000020] mt-4">result</div>
+            </a>
+        </div>
     </div>
 </x-app-layout>

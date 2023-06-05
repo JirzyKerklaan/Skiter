@@ -9,7 +9,7 @@ class MessageController extends Controller
 {
     public function index()
     {
-        $messages = Message::all();
+        $messages = Message::with("user")->get();
         return view("home", [
             "messages" => $messages
         ]);
@@ -25,7 +25,8 @@ class MessageController extends Controller
 
         $data = Message::create([
             'titel' => $parameters['titel'],
-            'text' => $parameters['text']
+            'text' => $parameters['text'],
+            'user_id' => auth()->user()->id
         ]);
 
         return redirect()->route('message.home');

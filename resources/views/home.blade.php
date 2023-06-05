@@ -106,6 +106,7 @@
                     <h2 class="card-title text-2xl text-[#c5c5c5] h-14 pl-6 bg-gradient-to-b from-[#00000082] via-[#00000055] to-[#00000000] rounded-t-xl">{{ $message->titel  }}</h2>
                     <div class="card-body group">
                         <p class="opacity-0 group-hover:opacity-100 w-full h-full transition ease-in-out duration-500 text-[#c5c5c5]">{{ $message->text }} </p>
+                        <p>{{$message->user->name}}</p>
                         <div class="card-actions justify-end">
                             <a href="{{route("message.edit",$message->id)}}" class="btn btn-ghost text-[#C5C5C5]">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -129,6 +130,8 @@
                         <h2 class="card-title text-2xl text-[#c5c5c5] h-14 pl-6 bg-gradient-to-b from-[#00000082] via-[#00000055] to-[#00000000] rounded-t-xl">{{ $message->titel  }}</h2>
                         <div class="card-body group">
                             <p class="opacity-0 group-hover:opacity-100 w-full h-full transition ease-in-out duration-500 text-[#c5c5c5]">{{ $message->text }} </p>
+                            <p>{{$message->user->name}}</p>
+
                         </div>
                     </div>
                 @endforeach

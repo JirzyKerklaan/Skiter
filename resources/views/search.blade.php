@@ -101,8 +101,8 @@
                     </svg>
                 </div>
             </div>
-            <a href="/account" class="w-full h-fit flex items-center justify-center flex-col mt-8">
-                <div class="result w-2/4 px-4 py-4 rounded-full bg-[#00000020] mt-4">result</div>
+            <a href="/account" class="w-2/4 h-fit flex items-center justify-center flex-col mt-8">
+                <div class="result w-full px-4 py-4 rounded-full bg-[#00000020] mt-4">result</div>
             </a>
         </div>
     </div>

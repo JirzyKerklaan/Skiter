@@ -71,6 +71,8 @@
                 </div>
             </div>
         @endauth
-
+        <div class="w-full h-full flex items-center justify-center">
+            <div class="w-5/6 h-5/6 bg-red-500">test</div>
+        </div>
     </div>
 </x-app-layout>

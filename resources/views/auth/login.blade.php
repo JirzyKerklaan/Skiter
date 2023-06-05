@@ -25,11 +25,13 @@
                 </div>
 
 
-                <div class="flex items-center justify-end mt-4">
-
-                    <x-primary-button class="ml-3">
+                <div class="m-1 mt-2 w-full h-full">
+                    <x-primary-button class="w-full h-full py-4 bg-[#7b68ee] hover:bg-[#4c38c8] rounded-md flex items-center justify-center">
                         {{ __('Log in') }}
                     </x-primary-button>
+                </div>
+                <div class="w-full h-fit text-center hover:underline">
+                    <a href="/register">Don't have an account? Sign up!</a>
                 </div>
             </div>
         </div>

@@ -73,4 +73,11 @@ class MessageController extends Controller
             ->with('success','Product deleted successfully');
     }
 
+    public function show(Message $message){
+
+        $message->load("comments.user");
+        return view("message",["message" => $message]);
+
+    }
+
 }

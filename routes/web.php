@@ -26,9 +26,13 @@ Route::put('/messages/{message}/edit',[MessageController::class,"update"])->name
 
 Route::delete('/messages/{message}/delete',[MessageController::class,"destroy"])->name('messages.delete');
 
+Route::get('/messages/{message}',[MessageController::class,"show"])->name('message.show');
+
+
 Route::get('/search', [MessageController::class,"search"])->name('message.search');
 
 Route::get('/account', [MessageController::class,"account"])->name('message.account');
 
+Route::post('/comments/{message}',[\App\Http\Controllers\CommentController::class, "store"])->name('comment.store');
 
 require __DIR__ . '/auth.php';

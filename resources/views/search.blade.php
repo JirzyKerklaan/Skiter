@@ -1,7 +1,7 @@
 <x-app-layout>
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <div class="bg-gradient-to-b from-[#111827] to-[#0C1424] min-h-screen w-screen">
+        <div class="bg-gradient-to-b from-[#111827] to-[#0C1424] min-h-screen w-screen overflow-x-hidden">
         @auth
             <div class="navbar bg-gray-900 border-b border-[#393F4A] mb-4 sticky top-0 z-30 text-[#C5C5C5]">
                 <div class="navbar-start lg:hidden">
@@ -45,11 +45,14 @@
                 <div class="navbar-end">
                     <div class="menu menu-horizontal px-1">
                         <ul>
-                            <li class="group"><a href="/account">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                                    </svg>
-                                </a></li>
+                            <form class="navbar-end" method="post" action="{{route('logout')}}">
+                                @csrf
+                                <button class="btn btn-ghost type="submit">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
+                                </svg>
+                                </button>
+                            </form>
                         </ul>
                     </div>
                 </div>
@@ -92,18 +95,12 @@
                 </div>
             </div>
         @endauth
-        <div class="flex justify-center flex-col items-center">
-            <div class="w-3/5 bg-[#00000020] rounded-full h-14 flex items-center">
-                <input type="text" placeholder="Search..." class="w-[90%] h-[90%] rounded-l-full bg-transparent px-4 border-r border-gray-700">
-                <div class="flex items-center justify-center flex-grow hover:bg-[#7B68EE] transition duration-400 ease-in-out h-full rounded-r-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                    </svg>
-                </div>
+        <div class="w-full flex items-center justify-center">
+            <div class="grid grid-cols-3 h-fit w-5/6 gap-4">
+                    @foreach($messages as $message)
+                    <div class="bg-[#00000040] aspect-square flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1612441804231-77a36b284856?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] bg-center bg-blend-overlay bg-cover"><span class="w-full h-full flex items-center justify-center text-white">{{$message->titel}}</span></div>
+                    @endforeach
             </div>
-            <a href="/account" class="w-2/4 h-fit flex items-center justify-center flex-col mt-8">
-                <div class="result w-full px-4 py-4 rounded-full bg-[#00000020] mt-4">result</div>
-            </a>
         </div>
     </div>
 </x-app-layout>

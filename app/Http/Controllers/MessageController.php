@@ -37,11 +37,10 @@ class MessageController extends Controller
     }
 
     public function search(){
-        return view("search");
-    }
-
-    public function account() {
-        return view("account");
+        $messages = Message::with("user")->get();
+        return view("search", [
+            "messages" => $messages
+        ]);
     }
 
     public function edit($id){

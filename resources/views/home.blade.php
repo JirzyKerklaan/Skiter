@@ -139,8 +139,8 @@
                         </div>
                     </div>
                 </div>
+                </div>
         @endforeach
-    </div>
     @else
             <div class="flex flex-col items-center gap-14 pb-14">
                 @foreach($messages as $message)

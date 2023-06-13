@@ -11,8 +11,14 @@ class Message extends Model
     protected $fillable = [
         'titel',
         'text',
+        'file',
         'user_id'
     ];
+
+    public function getFileAttribute($value)
+    {
+        return str_replace('public', 'storage', $value);
+    }
 
     public function user(): BelongsTo
     {
@@ -23,4 +29,9 @@ class Message extends Model
     {
         return $this->hasMany(Comment::class);
     }
+
+    public function likes(){
+        return $this->hasMany(Like::class);
+    }
+
 }

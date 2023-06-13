@@ -83,7 +83,7 @@
         @endauth
 <div class="">
     <div class="w-2/5 mx-auto">
-        <form action="{{route('message.store')}}" method="post">
+        <form action="{{route('message.store')}}" method="post" enctype="multipart/form-data">
             <x-validation-errors/>
             <div class="flex flex-col items-center">
                 <div class="w-full">
@@ -96,6 +96,7 @@
                         <textarea placeholder="I started with..." class="shadow rounded-md bg-[#00000020] placeholder:font-normal text-[#c5c5c5] min-h-fit h-32 w-full appearance-none focus:outline-[#c5c5c5] rounded py-2 px-3 leading-tight focus:outline-none" name="text" id="text"></textarea>
                     </label>
                 </div>
+                <input type="file" name="file" class="file-input w-full max-w-xs mb-8" />
             @csrf
                 <div class="w-full">
             <button class="bg-transparent hover:bg-[#7B68EE] transition duration-300 ease-in-out text-[#c5c5c5] font-semibold py-2 px-4 w-full rounded-md border border-[#7B68EE] hover:border-transparent" type="submit">Create new post</button>

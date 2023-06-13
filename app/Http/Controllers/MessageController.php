@@ -9,7 +9,7 @@ class MessageController extends Controller
 {
     public function index()
     {
-        $messages = Message::with("user")->get();
+        $messages = Message::with("user")->withCount('likes')->get();
         return view("home", [
             "messages" => $messages
         ]);
@@ -20,12 +20,15 @@ class MessageController extends Controller
         $parameters = $request->validate([
             'titel' => 'required|max:50|min:1',
             'text' => 'required|max:12000|min:1',
-
+            'file' => 'required|image',
         ]);
+
+        $path = $request->file('file')->store('public');
 
         $data = Message::create([
             'titel' => $parameters['titel'],
             'text' => $parameters['text'],
+            'file' => $path,
             'user_id' => auth()->user()->id
         ]);
 

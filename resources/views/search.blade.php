@@ -98,7 +98,7 @@
         <div class="w-full flex items-center justify-center">
             <div class="grid grid-cols-3 h-fit w-5/6 gap-4">
                     @foreach($messages as $message)
-                    <div class="bg-[#00000040] aspect-square flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1612441804231-77a36b284856?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] bg-center bg-blend-overlay bg-cover flex-col"><span class="w-full h-fit flex items-center justify-center text-white">{{$message->titel}}</span><span class="w-full h-fit flex justify-center items-end">{{$message->user?->name}}</span></div>
+                    <div class="bg-[#00000040] aspect-square flex items-center justify-center bg-[url('{{asset($message->file)}}')] bg-center bg-blend-overlay bg-cover flex-col"><span class="w-full h-fit flex items-center justify-center text-white">{{$message->titel}}</span><span class="w-full h-fit flex justify-center items-end">{{$message->user?->name}}</span></div>
                     @endforeach
             </div>
         </div>

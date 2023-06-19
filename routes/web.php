@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LikeController;
 use App\Http\Controllers\MessageController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,10 +30,16 @@ Route::delete('/messages/{message}/delete',[MessageController::class,"destroy"])
 Route::get('/messages/{message}',[MessageController::class,"show"])->name('message.show');
 
 
+Route::post('likes/{message}/store', [LikeController::class,"store"])->name('like.store');
+
+Route::delete('likes/{message}/delete', [LikeController::class,"destroy"])->name('like.delete');
+
+
 Route::get('/search', [MessageController::class,"search"])->name('message.search');
 
 Route::get('/account', [MessageController::class,"account"])->name('message.account');
 
 Route::post('/comments/{message}',[\App\Http\Controllers\CommentController::class, "store"])->name('comment.store');
+
 
 require __DIR__ . '/auth.php';

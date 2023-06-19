@@ -166,7 +166,7 @@
     @else
             <div class="flex flex-col items-center gap-14 pb-14">
                 @foreach($messages as $message)
-                    <div class="card w-2/4 bg-[url('https://images.unsplash.com/photo-1612441804231-77a36b284856?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] bg-cover aspect-[16/9] shadow-xl rounded-xl">
+                    <div class="card w-2/4 bg-[url('{{asset($message->file)}}')] bg-cover aspect-[16/9] shadow-xl rounded-xl">
                         <h2 class="card-title text-2xl text-[#c5c5c5] h-14 pl-6 bg-gradient-to-b from-[#00000082] via-[#00000055] to-[#00000000] rounded-t-xl">{{ $message->titel  }}</h2>
                         <div class="card-body group">
                             <p class="opacity-0 group-hover:opacity-100 w-full h-full transition ease-in-out duration-500 text-[#c5c5c5]">{{ $message->text }} </p>

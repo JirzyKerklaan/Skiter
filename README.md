@@ -4,12 +4,12 @@
 ![Skiter](https://87252.stu.sd-lab.nl/GitHub/Skiter.PNG)
 
 ## About SKITER
-Skiter is a social media platform inspired by Twitter and Instagram, built by me and a classmate. During the project, my focus was on the front-end development, specifically designing and implementing the visual aspects and user interactions. We chose to build the application using Laravel and TailwindCSS. Laravel provided a solid foundation for handling various functionalities and integrating different components, while TailwindCSS empowered us to create an attractive and responsive user interface using its pre-built CSS classes. Together, Laravel and TailwindCSS enabled us to deliver a dynamic and user-friendly social media experience named Skiter.
+Skiter is a social media platform inspired by Twitter and Instagram, built by me and a classmate. During the project, my focus was on the front and back-end development, specifically designing and implementing the visual aspects, and building functionalities like uploading images or giving feedback on posts.
 
 
 ### Why did we use Laravel
 
-We decided to use Laravel because we wanted to learn a new back-end framework. Since both of us were familiar with writing PHP code, we searched for a PHP framework on Google, and we concluded that Laravel was the best choice for us.
+We decided to use Laravel because we wanted to learn a new back-end framework. Since both of us were familiar with writing PHP code, we searched for a PHP framework on Google, and Laravel seemed to be the best choice for us.
 
 
 ### Why did we use TailwindCSS

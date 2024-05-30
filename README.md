@@ -19,7 +19,7 @@ We were deciding which CSS framework to use. We had the choice of Bootstrap, but
 ## Lessons learned
 
 * #### Prioritize user experience 
-###### Focus on creating a nintuitive and enjoyable platform by understanding user needs and incorporating their feedback.
+###### Focus on creating an intuitive and enjoyable platform.
 
 * #### Image upload system
 ###### While constructing the image uploading system, we discovered that it was actually easier than we initially thought. We were able to complete this function much faster than we had anticipated, which gave us extra time to concentrate on other aspects of the application.
@@ -30,5 +30,3 @@ We were deciding which CSS framework to use. We had the choice of Bootstrap, but
 ## We are the builders
 
 - [@JirzyKerklaan](https://www.github.com/Jirzykerklaan)
-
-- [@stu87955](https://www.github.com/stu87955)
